@@ -1,0 +1,21 @@
+.contenedor {
+    display: grid;
+    grid-gap: 20px;
+
+    /*grid-template-columns: repeat(4, 1fr);*/
+    /*grid-template-columns: repeat(4, minmax(100px, 1fr)); se utiliza conmunmente
+    pero surge el problema de que al llegar al minmax de 100 pixeles se pierde el 
+    elemento no se hace responsive o no se acomoda en ningun lado*/
+    
+    /*se utiliza auto-fill para que lo elementos al llegar al minmax de 100 pixeles
+    se acomoden debajo automaticamente, es decir se hace responsive, las columnas 
+    tienen el tamaño a utilizar pero deja espacio disponible solo se utiliza
+    autofill y autofit cuando se utiliza 
+    repeat*/
+
+    /*auto fill y autofit tienen el mismo resultado al trabajar adaptar paginas
+    a dispositivos moviles, la direferncia es cuando tenemos pocos elementos
+    autofit permite rellenar todo el contenedor con las columnas que tenemos
+    disponibles*/
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+}
